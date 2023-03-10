@@ -220,52 +220,16 @@ mouseHoverContent.addEventListener('mouseleave', function () {
   mouseHoverContent.style.display = 'none'
 })
 
-
-const fill = document.querySelector('.fill')
-const empties = document.querySelectorAll('.empty')
-
-// Fill Listeners
-fill.addEventListener('dragstart', dragStart)
-fill.addEventListener('dragend', dragEnd)
-
-// Loop through empties and call drag events
-for (const empty of empties) {
-  empty.addEventListener('dragover', dragOver)
-  empty.addEventListener('dragenter', dragEnter)
-  empty.addEventListener('dragleave', dragLeave)
-  empty.addEventListener('drop', dragDrop)
+function allowDrop(ev) {
+  ev.preventDefault();
 }
 
-// Drag Functions
-function dragStart() {
-  this.className += ' hold'
-  setTimeout(() => this.className = 'invisible', 0)
-  // console.log('start')
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
 }
 
-function dragEnd() {
-  this.className = 'fill'
-  // console.log('end')
-}
-
-function dragOver(e) {
-  e.preventDefault()
-  // console.log('over')
-}
-
-function dragEnter(e) {
-  e.preventDefault()
-  this.className += ' hovered'
-  // console.log('enter')
-}
-
-function dragLeave() {
-  this.className = "empty"
-  // console.log('leave')
-}
-
-function dragDrop() {
-  this.className = "empty"
-  this.append(fill)
-  // console.log('drop')
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }

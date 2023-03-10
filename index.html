@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <div class="page-wrapper">
         <div id="header">
             <h1>Automation Page</h1>
             <div id="created-by">Created by Milan Nicic</div>
@@ -146,14 +145,13 @@
             <div id="displayed-image"></div>
         </div>
         <div>
-            <div class="empty">
-                <div class="fill" draggable="true"></div>
+            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="img-draggable" class="fill" draggable="true" ondragstart="drag(event)"></div>
             </div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
+            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </div>
-    </div>
     <script src="script.js"></script>
 </body>
 
