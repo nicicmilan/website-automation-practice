@@ -42,9 +42,9 @@ div.searchField-example {
     font-family: "Trebuchet MS", Arial, sans-serif;
     display: none;
     position: absolute;
-    right: 1495px;
+    left: 228px;
     top: 128px;
-    width: 9.5%;
+    width: 180px;
     z-index: 1;
     background-color: #f1f1f1;
     list-style-type: none;
