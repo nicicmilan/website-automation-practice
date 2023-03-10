@@ -13,7 +13,7 @@
     background: #f5f5f5;
     position: relative;
     right: -220px;
-    top: -90px;
+    top: -110px;
     font-size: 14px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -35,7 +35,7 @@ div.searchField-example {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: relative;
     right: -270px;
-    top: -95px;
+    top: -112px;
 }
 
 #searchedList {
@@ -43,7 +43,7 @@ div.searchField-example {
     display: none;
     position: absolute;
     right: 1495px;
-    top: 133px;
+    top: 128px;
     width: 9.5%;
     z-index: 1;
     background-color: #f1f1f1;
@@ -70,7 +70,7 @@ select {
     position: relative;
     right: -441px;
     outline: none;
-    top: -150px;
+    top: -165px;
     width: 20%;
     font-size: 14px;
     width: 120px;
@@ -90,7 +90,7 @@ div.dropdown-example {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: relative;
     right: -460px;
-    top: -155px;
+    top: -165px;
 }
 
 .checkBoxes {
@@ -135,13 +135,13 @@ div.checkBoxBtns {
 .btn-style.class1 {
     position: relative;
     right: -725px;
-    top: -265px;
+    top: -280px;
 }
 
 .btn-style.class2 {
     position: relative;
     right: -750px;
-    top: -265px;
+    top: -280px;
     background-color: #009879;
     color: white;
     padding: 10px;
@@ -162,7 +162,7 @@ div.radioBtnSection {
     position: relative;
     right: -1100px;
     z-index: 1;
-    top: -30px;
+    top: -50px;
 }
 
 .line {
@@ -228,9 +228,9 @@ div.radioBtnSection {
 
 .searchField-style.class2 {
     position: absolute;
-    left: 565px;
-    top: 235px;
-    width: 8.6%;
+    left: 576px;
+    top: 250px;
+    width: 10%;
     outline: none;
 }
 
@@ -341,7 +341,7 @@ div.radioBtnSection {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: relative;
     right: -1090px;
-    top: -40px;
+    top: -50px;
 }
 
 .mouse-hover-content {
@@ -349,7 +349,7 @@ div.radioBtnSection {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: absolute;
     right: 197px;
-    top: 216px;
+    top: 230px;
     width: 9.5%;
     z-index: 1;
     background-color: #f1f1f1;
