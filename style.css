@@ -348,7 +348,7 @@ div.radioBtnSection {
     display: none;
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: absolute;
-    right: 197px;
+    left: 1525px;
     top: 231px;
     width: 9.5%;
     z-index: 1;
@@ -361,9 +361,6 @@ div.radioBtnSection {
     border-top: none;
 }
 
-#hover-elements-section:hover .mouse-hover-content {
-    display: block;
-}
 
 .mouse-hover-content a {
     color: black;
