@@ -459,8 +459,9 @@ button#hover {
     font-family: "Trebuchet MS", Arial, sans-serif;
     font-size: small;
     font-weight: 100;
+    z-index: 1;
     position: relative;
-    top: -1695px;
+    top: -20px;
 }
 
 div.empty {
