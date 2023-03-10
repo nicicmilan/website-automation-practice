@@ -152,7 +152,7 @@ const shadowRoot = shadowElement.attachShadow({ mode: "open" })
 const shadowInputField = document.createElement('input')
 shadowInputField.id = "shadowInputField"
 shadowInputField.className = "searchField-style class4"
-shadowInputField.placeholder= "Type in Shadow DOM"
+shadowInputField.placeholder = "Type in Shadow DOM"
 shadowRoot.appendChild(shadowInputField)
 const link = document.createElement("link");
 link.rel = "stylesheet";
@@ -174,7 +174,7 @@ async function saveFile() {
 
 let fileUpload = document.getElementById('fileupload')
 var uploadedImage = ''
-fileUpload.addEventListener('change', function() {
+fileUpload.addEventListener('change', function () {
   const file = this.files[0];
   const fileType = file.type.split('/')[0];
   if (fileType !== 'image') {
@@ -187,7 +187,7 @@ fileUpload.addEventListener('change', function() {
   reader.addEventListener("load", () => {
     const img = new Image();
     img.src = reader.result;
-    img.onload = function() {
+    img.onload = function () {
       if (this.width > 500 || this.height > 500) {
         alert("The image must be no larger than 500 x 500 pixels.");
         // Reset the file input to clear the selected file
@@ -202,6 +202,25 @@ fileUpload.addEventListener('change', function() {
   reader.readAsDataURL(file);
 })
 
+let mouseHoverBtn = document.querySelector('#hover')
+let mouseHoverContent = document.querySelector('.mouse-hover-content')
+
+mouseHoverBtn.addEventListener('mouseenter', function () {
+  mouseHoverContent.style.display = 'block'
+})
+
+mouseHoverBtn.addEventListener('mouseleave', function () {
+  mouseHoverContent.style.display = 'none'
+})
+mouseHoverContent.addEventListener('mouseenter', function () {
+  mouseHoverContent.style.display = 'block'
+})
+
+mouseHoverContent.addEventListener('mouseleave', function () {
+  mouseHoverContent.style.display = 'none'
+})
+
+
 const fill = document.querySelector('.fill')
 const empties = document.querySelectorAll('.empty')
 
@@ -211,42 +230,42 @@ fill.addEventListener('dragend', dragEnd)
 
 // Loop through empties and call drag events
 for (const empty of empties) {
-    empty.addEventListener('dragover', dragOver)
-    empty.addEventListener('dragenter', dragEnter)
-    empty.addEventListener('dragleave', dragLeave)
-    empty.addEventListener('drop', dragDrop)
+  empty.addEventListener('dragover', dragOver)
+  empty.addEventListener('dragenter', dragEnter)
+  empty.addEventListener('dragleave', dragLeave)
+  empty.addEventListener('drop', dragDrop)
 }
 
 // Drag Functions
 function dragStart() {
-    this.className += ' hold'
-    setTimeout(() => this.className = 'invisible', 0)
-    // console.log('start')
+  this.className += ' hold'
+  setTimeout(() => this.className = 'invisible', 0)
+  // console.log('start')
 }
 
 function dragEnd() {
-    this.className = 'fill'
-    // console.log('end')
+  this.className = 'fill'
+  // console.log('end')
 }
 
 function dragOver(e) {
-    e.preventDefault()
-    // console.log('over')
+  e.preventDefault()
+  // console.log('over')
 }
 
 function dragEnter(e) {
-    e.preventDefault()
-    this.className += ' hovered'
-    // console.log('enter')
+  e.preventDefault()
+  this.className += ' hovered'
+  // console.log('enter')
 }
 
 function dragLeave() {
-    this.className = "empty"
-    // console.log('leave')
+  this.className = "empty"
+  // console.log('leave')
 }
 
 function dragDrop() {
-    this.className = "empty"
-    this.append(fill)
-    // console.log('drop')
+  this.className = "empty"
+  this.append(fill)
+  // console.log('drop')
 }
