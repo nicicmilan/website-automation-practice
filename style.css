@@ -1,5 +1,9 @@
 * {}
 
+div#container {
+    overflow-x: hidden;
+}
+
 #header h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -349,7 +353,7 @@ div.radioBtnSection {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: absolute;
     left: 1525px;
-    top: 231px;
+    top: 239px;
     width: 9.5%;
     z-index: 1;
     background-color: #f1f1f1;
@@ -482,4 +486,64 @@ div.empty {
     top: 5px;
     left: 5px;
     cursor: pointer;
+}
+
+iframe {
+    width: 1250px;
+    height: 900px;
+    position: relative;
+    left: 50px;
+    top: -800px;
+}
+
+#button-container button {
+    position: relative;
+    left: 1500px;
+    top: -2240px;
+    margin: 2px;
+}
+
+.button {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    position: absolute;
+    background-color: #ff4848;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.alert {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    position: absolute;
+    background-color: #009879;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.success {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    position: absolute;
+    background-color: #26bdf8;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }

@@ -195,6 +195,12 @@ fileUpload.addEventListener('change', function () {
         document.querySelector('#displayed-image').style.backgroundImage = ''
         return;
       }
+      else if (this.width < 500 || this.height < 500) {
+        // Reset the file input to clear the selected file
+        document.querySelector('#displayed-image').style.backgroundPosition = 'center';
+        document.querySelector('#displayed-image').style.backgroundRepeat = 'no-repeat';
+        document.querySelector('#displayed-image').style.backgroundImage = `url(${uploadedImage})`
+      }
       uploadedImage = reader.result;
       document.querySelector('#displayed-image').style.backgroundImage = `url(${uploadedImage})`
     }
@@ -232,4 +238,44 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
+}
+
+function generateId() {
+  const timestamp = new Date().getTime().toString(16);
+  const random1 = Math.random().toString(16).substr(2, 4);
+  const random2 = Math.random().toString(16).substr(2, 4);
+  const random3 = Math.random().toString(16).substr(2, 4);
+  const random4 = Math.random().toString(16).substr(2, 6);
+  return `${timestamp}-${random1}-${random2}-5${random3}-${random4}`;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const buttonContainer = document.getElementById('button-container');
+  const buttons = buttonContainer.querySelectorAll('.button');
+
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].id = generateId(); // assign a unique ID to each button
+    buttons[i].addEventListener('click', shuffleButtons);
+  }
+
+  function shuffleButtons() {
+    for (let i = buttons.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tempText = buttons[j].textContent;
+      const tempId = buttons[j].id;
+      buttons[j].textContent = buttons[i].textContent;
+      buttons[j].id = buttons[i].id;
+      buttons[i].textContent = tempText;
+      buttons[i].id = tempId;
+      buttonContainer.insertBefore(buttons[j], buttons[i]);
+    }
+  }
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      alert(`you have clicked the ${button.className} element`)
+    })
+  })
+});
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', shuffleButtons);
 }

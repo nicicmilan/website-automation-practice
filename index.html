@@ -1,158 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Milan Nicic Practice Page</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Authentication Page</title>
+  <link rel="stylesheet" type="text/css" href="auth.css">
 </head>
 
 <body>
-        <div id="header">
-            <h1>Automation Page</h1>
-            <div id="created-by">Created by Milan Nicic</div>
-        </div>
-        <div class="line"></div>
-        <div class="radio-example"><b>Radio Buttons</b></div>
-        <div class="radioBtnSection">
-            <input type="radio" name="radioButton" class="radioBtns" value="first">
-            <label for="first">First</label><br>
-            <input type="radio" name="radioButton" class="radioBtns" value="second">
-            <label for="second">Second</label><br>
-            <input type="radio" name="radioButton" class="radioBtns" value="third">
-            <label for="third">Third</label><br>
-        </div>
-
-        <div id="searchFieldSection">
-            <div class="searchField-example"><b>Countries</b></div>
-            <input type="text" id="searchField" class="searchField-style" placeholder="Type to select countries"
-                autocomplete="off">
-            <ul id="searchedList">
-            </ul>
-        </div>
-
-        <div>
-            <div class="dropdown-example"><b>Dropdown</b></div>
-            <select id="dropdown">
-                <option value="">Select</option>
-                <option value="Option1">Option 1</option>
-                <option value="Option2">Option 2</option>
-                <option value="Option3">Option 3</option>
-            </select>
-        </div>
-
-        <div class="checkBox"><b>Checkboxes</b></div>
-        <div class="checkBoxBtns">
-            <input type="checkbox" class="checkBoxes" value="first">
-            <label for="first">First</label><br>
-            <input type="checkbox" class="checkBoxes" value="second">
-            <label for="second">Second</label><br>
-            <input type="checkbox" class="checkBoxes" value="third">
-            <label for="third">Third</label><br>
-        </div>
-
-        <div class="newlinkButtons">
-            <button id="newTab" onclick="openNewTab()" class="btn-style class1">Open New Tab</button>
-            <button id="newWindow" onclick="openNewWindow()" class="btn-style class2">Open New Window</button>
-        </div>
-
-        <table id="firstTable">
-            <tbody>
-                <tr>
-                    <th>Instructor</th>
-                    <th>Course</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Alexis Obrien</td>
-                    <td>Cypress Advanced Course</td>
-                    <td>29.99$</td>
-                </tr>
-                <tr>
-                    <td>Josef Winter</td>
-                    <td>Playwright Advanced Course</td>
-                    <td>19.99$</td>
-                </tr>
-                <tr>
-                    <td>Micheal Barker</td>
-                    <td>Manual Testing Course</td>
-                    <td>24.99$</td>
-                </tr>
-                <tr>
-                    <td>Zachary Garcia</td>
-                    <td>Advanced PactumJS Course</td>
-                    <td>14.99$</td>
-                </tr>
-                <tr>
-                    <td>Lennon Gibson</td>
-                    <td>Agile Methodologies Course</td>
-                    <td>13.99$</td>
-                </tr>
-                <tr>
-                    <td>Frederick Rich</td>
-                    <td>Jmeter Advanced Course</td>
-                    <td>9.99$</td>
-                </tr>
-                <tr>
-                    <td>Lawson Wells</td>
-                    <td>Selenium Java Advanced Course</td>
-                    <td>18.99$</td>
-                </tr>
-                <tr>
-                    <td>Wiktor Welch</td>
-                    <td>Appium Mobile Testing Course</td>
-                    <td>15.99$</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div>
-            <button onclick="showInputField()" id="showBtn" class="btn-style class3">Show</button>
-            <button onclick="hideInputField()" id="hideBtn" class="btn-style class4">Hide</button>
-            <input type="text" id="show-hide" class="searchField-style class2" placeholder="Show and hide input field">
-        </div>
-        <div id="rangeInputSection">
-            <button class="btn-style class5">Range Slider</button>
-            <input type="range" min="1" max="100" value=20 id="rangeSlider" class="range-slider">
-            <input type="number" min=1 max=100 id="sliderValue" class="searchField-style class1">
-            <div class="tooltip">20</div>
-        </div>
-        <div id="alerts">
-            <button onclick="alertPopUp()" id="alertBtn" class="btn-style class6">Alert</button>
-            <button onclick="confirmPopUp()" id="confirmBtn" class="btn-style class7">Confirm</button>
-            <input type="text" id="enterName" class="searchField-style class3" placeholder="Enter your name">
-        </div>
-        <div id="hover-elements-section">
-            <button id="hover" class="btn-style class8">Mouse Hover</button>
-            <div class="mouse-hover-content">
-                <a href="">Top</a>
-                <a href="">Reload</a>
-            </div>
-        </div>
-        <div id="shadowContent">
-            <button class="btn-style class9">Shadow DOM</button>
-            <div id="shadow-dom">
-            </div>
-        </div>
-        <div id="date-pickers">
-            <input type="date" max="9999-12-31" id="date-picker" class="searchField-style class5"
-                placeholder="mm/dd/yyyy">
-        </div>
-        <div id="uploadSection">
-            <input type="file" accept="image/jpg" class="file-upload-style" id="fileupload">
-            <div id="displayed-image"></div>
-        </div>
-        <div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div id="img-draggable" class="fill" draggable="true" ondragstart="drag(event)"></div>
-            </div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        </div>
-    <script src="script.js"></script>
+  <h1>Authentication Page</h1>
+  <form id="form-id" onsubmit="authenticate(event)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" class="searchField-style" placeholder="Enter username" name="username"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" class="searchField-style"placeholder="Enter password" name="password"><br><br>
+    <input type="submit" class="btn-style" value="Login">
+  </form>
+  <script src="auth.js"></script>
 </body>
 
 </html>
