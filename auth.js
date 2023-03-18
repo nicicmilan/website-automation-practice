@@ -1,7 +1,3 @@
-if (!localStorage.getItem('authenticated')) {
-  // Redirect to login page if not authenticated
-  window.location.href = 'index.html';
-}
 function authenticate(event) {
     event.preventDefault();
     const username = document.getElementById('username').value;
