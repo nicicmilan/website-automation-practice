@@ -282,3 +282,9 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 });
+
+const logoutBtn = document.querySelector('.logoutImg')
+logoutBtn.addEventListener('click', function() {
+  localStorage.removeItem('authenticated');
+  window.location.href = 'index.html'
+})

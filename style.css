@@ -547,3 +547,21 @@ iframe {
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
+
+div.logout {
+    position: relative;
+    top: -2680px;
+    left: 1830px;
+}
+
+div .logoutImg {
+    cursor: pointer;
+}
+
+div p {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    position: relative;
+    top: -23px;
+    left: -15px;
+    font-weight: bold;
+}
