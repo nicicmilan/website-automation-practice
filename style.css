@@ -47,7 +47,7 @@ div.searchField-example {
     display: none;
     position: absolute;
     left: 228px;
-    top: 128px;
+    top: 136px;
     width: 180px;
     z-index: 1;
     background-color: #f1f1f1;
@@ -305,7 +305,7 @@ div.radioBtnSection {
     position: relative;
     right: -750px;
     top: -550px;
-    width: 37px;
+    width: 55px;
     height: 10px;
     text-align: center;
     overflow-y: hidden;
@@ -467,8 +467,8 @@ button#hover {
 
 div.empty {
     display: inline-block;
-    height: 160px;
-    width: 160px;
+    height: 165px;
+    width: 165px;
     position: relative;
     top: -960px;
     margin: 10px;
@@ -489,11 +489,12 @@ div.empty {
 }
 
 iframe {
-    width: 1250px;
+    width: 1050px;
     height: 900px;
+    z-index: 1;
     position: relative;
-    left: 50px;
-    top: -800px;
+    left: 700px;
+    top: -865px;
 }
 
 #button-container button {
@@ -502,6 +503,7 @@ iframe {
     top: -2240px;
     margin: 2px;
 }
+
 
 .button {
     font-family: "Trebuchet MS", Arial, sans-serif;
@@ -549,12 +551,13 @@ iframe {
 }
 
 div.logout {
+    z-index: 1;
     position: relative;
-    top: -2680px;
+    top: -2720px;
     left: 1830px;
 }
 
-div .logoutImg {
+div img.logoutImg {
     cursor: pointer;
 }
 
@@ -564,4 +567,98 @@ div p {
     top: -23px;
     left: -15px;
     font-weight: bold;
+}
+
+div button.btn-style.class10 {
+    position: relative;
+    left: 1550px;
+    top: -2250px;
+    margin: 2px;
+    pointer-events: none;
+}
+
+div #timerButtons {
+    position: relative;
+    left: 739px;
+    top: -2300px;
+}
+
+.btn-style.class11 {
+    position: relative;
+    left: 763px;
+
+}
+
+.message {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 14px;
+    position: absolute;
+    left: 710px;
+    top: 125px;
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.box {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 14px;
+    background-color: #d4edda;
+    color: #155724;
+    text-align: center;
+}
+
+.closebtn {
+    padding: 8px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s ease;
+    pointer-events: auto;
+}
+
+.closebtn:hover {
+    color: #555;
+}
+
+#demo-tabpane-list {
+    position: relative;
+    top: -2000px;
+    left: 161px;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.list-group-item-action {
+    width: 20%;
+    color: #495057;
+    text-align: inherit;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+user agent stylesheet div {
+    display: block;
+}
+
+.btn-style.class12 {
+    position: relative;
+    left: 130px;
+    top: -30px;
+    pointer-events: none;
 }

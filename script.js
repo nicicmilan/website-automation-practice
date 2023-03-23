@@ -284,7 +284,27 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const logoutBtn = document.querySelector('.logoutImg')
-logoutBtn.addEventListener('click', function() {
+logoutBtn.addEventListener('click', function () {
   localStorage.removeItem('authenticated');
   window.location.href = 'index.html'
 })
+
+const timerButton = document.getElementById('timerButton')
+const timerMessage = document.querySelector('.message.box')
+const successMsg = document.querySelector('strong')
+
+timerButton.addEventListener('click', function () {
+  const startTime = Date.now();
+  setTimeout(() => {
+    const endTime = Date.now();
+    const duration = (endTime - startTime) / 1000
+    successMsg.innerHTML = `Success after ${duration} seconds!`
+    timerMessage.style.display = 'block'
+
+
+  }, Math.floor(Math.random() * 5000))
+})
+$( function() {
+  $( ".vertical-list-container" ).sortable();
+  $( ".vertical-list-container" ).disableSelection();
+} );
