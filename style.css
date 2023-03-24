@@ -164,6 +164,7 @@ div.checkBoxBtns {
 div.radioBtnSection {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: relative;
+    width: 20%;
     right: -1100px;
     z-index: 1;
     top: -50px;
