@@ -1,11 +1,28 @@
 * {}
 
-div#container {
-    overflow-x: hidden;
+div#header {
+    position: relative;
+    display: inline-block;
 }
 
 #header h1 {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+div#created-by {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: small;
+    font-weight: 100;
+    position: relative;
+    top: -20px;
+}
+
+div.searchFieldSection {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    left: 220px;
+    top: -20px;
 }
 
 .searchField-style:-webkit-input-placeholder {
@@ -16,8 +33,6 @@ div#container {
     font-family: "Trebuchet MS", Arial, sans-serif;
     background: #f5f5f5;
     position: relative;
-    right: -220px;
-    top: -110px;
     font-size: 14px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -35,19 +50,19 @@ div#container {
     outline: none;
 }
 
-div.searchField-example {
+div.searchFieldExample {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: relative;
-    right: -270px;
-    top: -112px;
+    left: 50px;
+    top: -5px;
 }
 
 #searchedList {
     font-family: "Trebuchet MS", Arial, sans-serif;
     display: none;
     position: absolute;
-    left: 228px;
-    top: 136px;
+    left: 0px;
+    top: 64px;
     width: 180px;
     z-index: 1;
     background-color: #f1f1f1;
@@ -69,12 +84,26 @@ div.searchField-example {
     color: #fff
 }
 
+div.dropdownSection {
+    position: relative;
+    width: 120px;
+    height: 50px;
+    left: 450px;
+    top: -75px;
+}
+
+div.dropdownExample {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    position: relative;
+    left: 24px;
+    top: -5px;
+
+}
+
 select {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: relative;
-    right: -441px;
     outline: none;
-    top: -165px;
     width: 20%;
     font-size: 14px;
     width: 120px;
@@ -85,16 +114,12 @@ select {
     border-radius: 3px;
 }
 
-option:nth-child(1):hover {
-    background-color: #009879;
-}
-
-
-div.dropdown-example {
-    font-family: "Trebuchet MS", Arial, sans-serif;
+div.checkBoxSection {
     position: relative;
-    right: -460px;
-    top: -165px;
+    width: 100px;
+    height: 80px;
+    left: 630px;
+    top: -138px;
 }
 
 .checkBoxes {
@@ -104,26 +129,32 @@ div.dropdown-example {
 div.checkBox {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: relative;
-    right: -600px;
-    top: -230px;
-
+    left: -5px;
 }
 
 div.checkBoxBtns {
     font-family: "Trebuchet MS", Arial, sans-serif;
     font-size: 11pt;
     position: relative;
-    right: -615px;
-    top: -230px;
     outline: none;
+}
 
+div.newLinkSection {
+    position: relative;
+    width: 250px;
+    height: 38px;
+    left: 750px;
+    top: -187px;
+}
+
+div.newLinkButtons {
+    width: 300px;
+    height: 100px;
 }
 
 .btn-style {
     font-family: "Trebuchet MS", Arial, sans-serif;
-    position: absolute;
-    right: 1050px;
-    top: 80px;
+    position: relative;
     background-color: #009879;
     color: white;
     padding: 10px;
@@ -138,14 +169,14 @@ div.checkBoxBtns {
 
 .btn-style.class1 {
     position: relative;
-    right: -725px;
-    top: -280px;
+    left: 0px;
+    top: 0px;
 }
 
 .btn-style.class2 {
     position: relative;
-    right: -750px;
-    top: -280px;
+    left: 0px;
+    top: 0px;
     background-color: #009879;
     color: white;
     padding: 10px;
@@ -157,22 +188,54 @@ div.checkBoxBtns {
     border-radius: 3px;
 }
 
+.radioBtnSection {
+    position: relative;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    width: 105px;
+    height: 80px;
+    left: 1050px;
+    top: -256px;
+}
+
 .radioBtns {
     outline: none;
 }
 
-div.radioBtnSection {
-    font-family: "Trebuchet MS", Arial, sans-serif;
+.radioBtnsExample {
     position: relative;
-    width: 20%;
-    right: -1100px;
-    z-index: 1;
-    top: -50px;
+    left: -10px;
+}
+
+.shadowDOMSection {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    left: 1200px;
+    top: -345px;
+}
+
+.btn-style.shadow {
+    pointer-events: none;
+    left: 50px;
+}
+
+.searchField-style.shadow {
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+
+.datePickerSection {
+    position: relative;
+    width: 130px;
+    height: 50px;
+    left: 1450px;
+    top: -410px;
 }
 
 .line {
     position: absolute;
-    top: 150px;
+    top: 170px;
     /* adjust the value to move the line up or down */
     left: 0;
     right: 0;
@@ -182,7 +245,7 @@ div.radioBtnSection {
 #firstTable {
     border-collapse: collapse;
     position: relative;
-    top: -205px;
+    top: -355px;
     right: -20px;
     font-size: 0.9em;
     font-family: sans-serif;
@@ -228,29 +291,46 @@ div.radioBtnSection {
     cursor: pointer;
     user-select: none;
     text-align: center;
-
 }
 
-.searchField-style.class2 {
-    position: absolute;
-    left: 576px;
-    top: 250px;
-    width: 10%;
-    outline: none;
+.showHideSection {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    left: 600px;
+    top: -724px;
 }
 
 .btn-style.class3 {
     position: relative;
-    right: -590px;
-    top: -570px;
-
+    left: 40px;
 }
 
 .btn-style.class4 {
     position: relative;
-    right: -600px;
-    top: -570px;
+    left: 50px;
+}
 
+.searchField-style.class2 {
+    position: relative;
+    left: 12px;
+    top: 20px;
+    outline: none;
+}
+
+.rangeInputSection {
+    position: relative;
+    width: 300px;
+    height: 60px;
+    left: 900px;
+    top: -800px;
+}
+
+.btn-style.class5 {
+    position: relative;
+    left: 80px;
+    top: -24px;
+    pointer-events: none;
 }
 
 .range-slider::-webkit-slider-thumb {
@@ -267,10 +347,10 @@ div.radioBtnSection {
 
 .range-slider {
     position: relative;
-    right: -740px;
-    top: -550px;
+    right: 0px;
+    top: 0px;
     -webkit-appearance: none;
-    width: 12%;
+    width: 250px;
     height: 5px;
     border-radius: 5px;
     background: #d3d3d3;
@@ -304,58 +384,73 @@ div.radioBtnSection {
 
 .searchField-style.class1 {
     position: relative;
-    right: -750px;
-    top: -550px;
-    width: 55px;
-    height: 10px;
+    left: 260px;
+    top: -22px;
+    width: 58px;
+    height: 5px;
     text-align: center;
     overflow-y: hidden;
 }
 
-.searchField-style.class1::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.tooltip {
+    background: #009879;
+    color: white;
+    padding: 4px 12px;
+    position: absolute;
+    margin: -225px -900px;
+    border-radius: 4px;
+    transform: translateX(-5%);
 }
 
-.btn-style.class5 {
-    position: relative;
-    right: -900px;
-    top: -605px;
-    pointer-events: none;
+.tooltip::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: #009879;
 }
 
-.btn-style.class6 {
+.popUpSection {
     position: relative;
-    right: -1250px;
-    top: -645px;
+    width: 200px;
+    height: 60px;
+    left: 1300px;
+    top: -860px;
 }
 
-.btn-style.class7 {
+.alertBtn {
     position: relative;
-    right: -1270px;
-    top: -645px;
+    left: 30px;
+    top: -24px;
 }
 
-.searchField-style.class3 {
+.confirmBtn {
     position: relative;
-    right: -1105px;
-    top: -590px;
+    left: 30px;
+    top: -24px;
 }
 
-.radio-example {
-    font-family: "Trebuchet MS", Arial, sans-serif;
+.enterNameField {
     position: relative;
-    right: -1090px;
-    top: -50px;
+    left: 8px;
+    top: -5px;
+}
+
+.hoverElementsSection {
+    position: relative;
+    width: 180px;
+    height: 80px;
+    left: 1550px;
+    top: -944px;
 }
 
 .mouse-hover-content {
     display: none;
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: absolute;
-    left: 1525px;
-    top: 239px;
-    width: 9.5%;
+    left: 0px;
+    top: 36px;
+    width: 100%;
     z-index: 1;
     background-color: #f1f1f1;
     list-style-type: none;
@@ -365,7 +460,6 @@ div.radioBtnSection {
     overflow-y: hidden;
     border-top: none;
 }
-
 
 .mouse-hover-content a {
     color: black;
@@ -378,50 +472,17 @@ div.radioBtnSection {
     background-color: #009879;
     color: #fff
 }
-
-button#hover {
+.uploadSection {
     position: relative;
-    right: -1517px;
-    top: -684px;
+    left: 850px;
+    top: -900px;
+    width: 0;
 }
 
-.tooltip {
-    background: #009879;
-    color: white;
-    padding: 4px 12px;
-    position: absolute;
-    border-radius: 4px;
-    top: 265px;
-    transform: translateX(-5%);
-}
-
-.tooltip::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    background: #009879;
-}
-
-.searchField-style.class4 {
-    position: relative;
-    z-index: 3;
-    right: -1285px;
-    top: -860px;
-}
-
-.btn-style.class9 {
-    position: relative;
-    right: -1320px;
-    top: -870px;
-    pointer-events: none;
-}
-
-.searchField-style.class5 {
-    position: relative;
-    right: -1500px;
-    z-index: 3;
-    top: -903px;
+#displayed-image {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
 }
 
 .file-upload-style {
@@ -443,35 +504,18 @@ button#hover {
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
-
-
-#uploadSection {
+.dragAndDropSection {
     position: relative;
-    right: -900px;
-    top: -730px;
+    width: 800px;
+    left: 10px;
+    top: -1150px;
 }
-
-#displayed-image {
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
-}
-
-#created-by {
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: small;
-    font-weight: 100;
-    z-index: 1;
-    position: relative;
-    top: -20px;
-}
-
 div.empty {
     display: inline-block;
     height: 165px;
     width: 165px;
     position: relative;
-    top: -960px;
+    top: 0px;
     margin: 10px;
     border-width: 3px;
     border-style: solid;
@@ -489,23 +533,12 @@ div.empty {
     cursor: pointer;
 }
 
-iframe {
-    width: 1050px;
-    height: 900px;
-    z-index: 1;
+.dynamicElementsSection {
     position: relative;
-    left: 700px;
-    top: -865px;
+    width: 200px;
+    top: -1500px;
+    left: 1600px;
 }
-
-#button-container button {
-    position: relative;
-    left: 1500px;
-    top: -2240px;
-    margin: 2px;
-}
-
-
 .button {
     font-family: "Trebuchet MS", Arial, sans-serif;
     position: absolute;
@@ -523,7 +556,8 @@ iframe {
 
 .alert {
     font-family: "Trebuchet MS", Arial, sans-serif;
-    position: absolute;
+    position: relative;
+    left: -80px;
     background-color: #009879;
     color: white;
     padding: 10px;
@@ -538,7 +572,8 @@ iframe {
 
 .success {
     font-family: "Trebuchet MS", Arial, sans-serif;
-    position: absolute;
+    position: relative;
+    left: 3px;
     background-color: #26bdf8;
     color: white;
     padding: 10px;
@@ -550,43 +585,80 @@ iframe {
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
-
-div.logout {
-    z-index: 1;
+.challengingDOMBtn {
     position: relative;
-    top: -2720px;
-    left: 1830px;
-}
-
-div img.logoutImg {
-    cursor: pointer;
-}
-
-div p {
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    position: relative;
-    top: -23px;
-    left: -15px;
-    font-weight: bold;
-}
-
-div button.btn-style.class10 {
-    position: relative;
-    left: 1550px;
-    top: -2250px;
-    margin: 2px;
+    width: 125px;
+    left: -30px;
+    top: -20px;
     pointer-events: none;
 }
 
-div #timerButtons {
+.iframeSection {
     position: relative;
-    left: 739px;
-    top: -2300px;
+    width: 0;
+    left: 750px;
+    top: -1100px;
 }
 
-.btn-style.class11 {
+iframe {
+    width: 1050px;
+    height: 900px;
+}
+
+#demo-tabpane-list {
     position: relative;
-    left: 763px;
+    width: 370px;
+    top: -2050px;
+    left: 200px;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.list-group-item-action {
+    width: 360px;
+    height: 50px;
+    color: #495057;
+    text-align: inherit;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+user agent stylesheet div {
+    display: block;
+}
+
+.btn-style.class12 {
+    position: relative;
+    left: 130px;
+    top: -30px;
+    pointer-events: none;
+}
+div#timerButtons {
+    position: relative;
+    width: 420px;
+    left: 1555px;
+    top: -2600px;
+}
+
+.btn-style.timerBtn {
+    position: relative;
+    width: 75px;
+    left: 0px;
 
 }
 
@@ -594,8 +666,8 @@ div #timerButtons {
     font-family: "Trebuchet MS", Arial, sans-serif;
     font-size: 14px;
     position: absolute;
-    left: 710px;
-    top: 125px;
+    left: -140px;
+    top: 50px;
     padding: 10px;
     border-radius: 5px;
     pointer-events: none;
@@ -622,44 +694,20 @@ div #timerButtons {
     color: #555;
 }
 
-#demo-tabpane-list {
+div.logout {
     position: relative;
-    top: -2000px;
-    left: 161px;
+    top: -3265px;
+    left: 1830px;
 }
 
-.list-group-item:first-child {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+div img.logoutImg {
+    cursor: pointer;
 }
 
-.list-group-item {
+div p {
+    font-family: "Trebuchet MS", Arial, sans-serif;
     position: relative;
-    display: block;
-    padding: 0.75rem 1.25rem;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .125);
-}
-
-.list-group-item-action {
-    width: 20%;
-    color: #495057;
-    text-align: inherit;
-}
-
-*,
-::after,
-::before {
-    box-sizing: border-box;
-}
-
-user agent stylesheet div {
-    display: block;
-}
-
-.btn-style.class12 {
-    position: relative;
-    left: 130px;
-    top: -30px;
-    pointer-events: none;
+    top: -23px;
+    left: -15px;
+    font-weight: bold;
 }

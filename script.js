@@ -150,7 +150,7 @@ const shadowElement = document.getElementById('shadow-dom')
 const shadowRoot = shadowElement.attachShadow({ mode: "open" })
 const shadowInputField = document.createElement('input')
 shadowInputField.id = "shadowInputField"
-shadowInputField.className = "searchField-style class4"
+shadowInputField.className = "searchField-style shadow"
 shadowInputField.placeholder = "Type in Shadow DOM"
 shadowRoot.appendChild(shadowInputField)
 const link = document.createElement("link");

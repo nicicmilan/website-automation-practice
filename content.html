@@ -11,14 +11,45 @@
 </head>
 
 <body>
-    <div id="container">
+    <div class="container">
         <div id="header">
             <h1>Automation Page</h1>
             <div id="created-by">Created by Milan Nicic</div>
         </div>
-        <div class="line"></div>
-        <div class="radio-example"><b>Radio Buttons</b></div>
+        <div class="searchFieldSection">
+            <div class="searchFieldExample"><b>Countries</b></div>
+            <input type="text" id="searchField" class="searchField-style" placeholder="Type to select countries"
+                autocomplete="off">
+            <ul id="searchedList"></ul>
+        </div>
+        <div class="dropdownSection">
+            <div class="dropdownExample"><b>Dropdown</b></div>
+            <select id="dropdown">
+                <option value>Select</option>
+                <option value="Option1">Option 1</option>
+                <option value="Option2">Option 2</option>
+                <option value="Option3">Option 3</option>
+            </select>
+        </div>
+        <div class="checkBoxSection">
+            <div class="checkBox"><b>Checkboxes</b></div>
+            <div class="checkBoxBtns">
+                <input type="checkbox" class="checkBoxes" value="first">
+                <label for="first">First</label><br>
+                <input type="checkbox" class="checkBoxes" value="second">
+                <label for="second">Second</label><br>
+                <input type="checkbox" class="checkBoxes" value="third">
+                <label for="third">Third</label><br>
+            </div>
+        </div>
+        <div class="newLinkSection">
+            <div class="newLinkButtons">
+                <button id="newTab" onclick="openNewTab()" class="btn-style class1">Open New Tab</button>
+                <button id="newWindow" onclick="openNewWindow()" class="btn-style class2">Open New Window</button>
+            </div>
+        </div>
         <div class="radioBtnSection">
+            <div class="radioBtnsExample"><b>Radio Buttons</b></div>
             <input type="radio" name="radioButton" class="radioBtns" value="first">
             <label for="first">First</label><br>
             <input type="radio" name="radioButton" class="radioBtns" value="second">
@@ -26,40 +57,15 @@
             <input type="radio" name="radioButton" class="radioBtns" value="third">
             <label for="third">Third</label><br>
         </div>
-
-        <div class="cen-left-align" id="searchFieldSection">
-            <div class="searchField-example"><b>Countries</b></div>
-            <input type="text" id="searchField" class="searchField-style" placeholder="Type to select countries"
-                autocomplete="off">
-            <ul id="searchedList">
-            </ul>
+        <div class="shadowDOMSection">
+            <button class="btn-style shadow">Shadow DOM</button>
+            <div id="shadow-dom">
+            </div>
         </div>
-
-        <div>
-            <div class="dropdown-example"><b>Dropdown</b></div>
-            <select id="dropdown">
-                <option value="">Select</option>
-                <option value="Option1">Option 1</option>
-                <option value="Option2">Option 2</option>
-                <option value="Option3">Option 3</option>
-            </select>
+        <div class="datePickerSection">
+            <input type="date" max="9999-12-31" id="date-picker" class="searchField-style" placeholder="mm/dd/yyyy">
         </div>
-
-        <div class="checkBox"><b>Checkboxes</b></div>
-        <div class="checkBoxBtns">
-            <input type="checkbox" class="checkBoxes" value="first">
-            <label for="first">First</label><br>
-            <input type="checkbox" class="checkBoxes" value="second">
-            <label for="second">Second</label><br>
-            <input type="checkbox" class="checkBoxes" value="third">
-            <label for="third">Third</label><br>
-        </div>
-
-        <div class="newlinkButtons">
-            <button id="newTab" onclick="openNewTab()" class="btn-style class1">Open New Tab</button>
-            <button id="newWindow" onclick="openNewWindow()" class="btn-style class2">Open New Window</button>
-        </div>
-
+        <div class="line"></div>
         <table id="firstTable">
             <tbody>
                 <tr>
@@ -109,44 +115,34 @@
                 </tr>
             </tbody>
         </table>
-
-        <div>
+        <div class="showHideSection">
             <button onclick="showInputField()" id="showBtn" class="btn-style class3">Show</button>
             <button onclick="hideInputField()" id="hideBtn" class="btn-style class4">Hide</button>
             <input type="text" id="show-hide" class="searchField-style class2" placeholder="Show and hide input field">
         </div>
-        <div id="rangeInputSection">
+        <div class="rangeInputSection">
             <button class="btn-style class5">Range Slider</button>
             <input type="range" min="1" max="100" value=20 id="rangeSlider" class="range-slider">
             <input type="number" min=1 max=100 id="sliderValue" class="searchField-style class1">
             <div class="tooltip">20</div>
         </div>
-        <div id="alerts">
-            <button onclick="alertPopUp()" id="alertBtn" class="btn-style class6">Alert</button>
-            <button onclick="confirmPopUp()" id="confirmBtn" class="btn-style class7">Confirm</button>
-            <input type="text" id="enterName" class="searchField-style class3" placeholder="Enter your name">
+        <div class="popUpSection">
+            <button onclick="alertPopUp()" id="alertBtn" class="btn-style alertBtn">Alert</button>
+            <button onclick="confirmPopUp()" id="confirmBtn" class="btn-style confirmBtn">Confirm</button>
+            <input type="text" id="enterName" class="searchField-style enterNameField" placeholder="Enter your name">
         </div>
-        <div id="hover-elements-section">
-            <button id="hover" class="btn-style class8">Mouse Hover</button>
+        <div class="hoverElementsSection">
+            <button id="hover" class="btn-style hoverBtn">Mouse Hover</button>
             <div class="mouse-hover-content">
                 <a href="ecommerce.html">Ecommerce Store</a>
                 <a href="">Reload</a>
             </div>
         </div>
-        <div id="shadowContent">
-            <button class="btn-style class9">Shadow DOM</button>
-            <div id="shadow-dom">
-            </div>
-        </div>
-        <div id="date-pickers">
-            <input type="date" max="9999-12-31" id="date-picker" class="searchField-style class5"
-                placeholder="mm/dd/yyyy">
-        </div>
-        <div id="uploadSection">
+        <div class="uploadSection">
             <input type="file" accept="image/jpg" class="file-upload-style" id="fileupload">
             <div id="displayed-image"></div>
         </div>
-        <div>
+        <div class="dragAndDropSection">
             <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <div id="img-draggable" class="fill" draggable="true" ondragstart="drag(event)"></div>
             </div>
@@ -154,28 +150,15 @@
             <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </div>
-        <div id="iframe-section">
-            <iframe id="first-iframe" src="https://qa-practice.netlify.app/" name="iframe-name">
-            </iframe>
-        </div>
-        <div>
-            <button class="btn-style class10">Challenging DOM</button>
-        </div>
-        <div id="button-container">
+        <div class="dynamicElementsSection" id="button-container">
+            <div class="btn-style challengingDOMBtn">Challenging DOM</div>
             <button class="button">Button 1</button>
             <button class="button alert">Button 2</button>
             <button class="button success">Button 3</button>
         </div>
-        <div class="logout">
-            <img class="logoutImg" src="exit-logout.png">
-            <p>Logout</p>
-        </div>
-        <div id="timerButtons">
-            <button id="timerButton" class="btn-style class11">Click me</button>
-            <div class="message box" style="display:none;">
-                <strong>Success</strong> Your message has been sent.
-                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            </div>
+        <div class="iframeSection">
+            <iframe id="first-iframe" src="https://qa-practice.netlify.app/" name="iframe-name">
+            </iframe>
         </div>
         <div id="demo-tabpane-list" aria-labelledby="demo-tab-list" role="tabpanel" aria-hidden="false"
             class="fade tab-pane active show">
@@ -188,6 +171,17 @@
                 <div class="list-group-item list-group-item-action">Five</div>
                 <div class="list-group-item list-group-item-action">Six</div>
             </div>
+        </div>
+        <div class="timerButtonSection" id="timerButtons">
+            <button id="timerButton" class="btn-style timerBtn">Click me</button>
+            <div class="message box" style="display:none;">
+                <strong>Success</strong> Your message has been sent.
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+        </div>
+        <div class="logout">
+            <img class="logoutImg" src="exit-logout.png">
+            <p>Logout</p>
         </div>
     </div>
     <script src="script.js"></script>
