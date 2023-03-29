@@ -304,7 +304,37 @@ timerButton.addEventListener('click', function () {
 
   }, Math.floor(Math.random() * 5000))
 })
-$( function() {
-  $( ".vertical-list-container" ).sortable();
-  $( ".vertical-list-container" ).disableSelection();
-} );
+$(function () {
+  $(".vertical-list-container").sortable();
+  $(".vertical-list-container").disableSelection();
+});
+const bottomElement = document.querySelector('iframe');
+
+window.addEventListener('scroll', function (e) {
+  // get the current scroll position
+  const scrollPosition = window.scrollY;
+
+  // get the position of the bottom-most element
+  const bottomPosition = bottomElement.offsetTop + bottomElement.offsetHeight;
+
+  // if the user has scrolled past the bottom-most element, prevent further scrolling
+  if (scrollPosition > bottomPosition) {
+    e.preventDefault();
+    window.scrollTo(0, bottomPosition);
+  }
+});
+
+const sliderBtn = document.querySelector('#toggleMode')
+const defaultStyle = document.getElementById('default-style')
+const darkStyle = document.getElementById('dark-style') 
+sliderBtn.addEventListener('click', function () {
+  darkStyle.disabled = !darkStyle.disabled;
+  const lgBtnSrc = logoutBtn.src.slice(-15)
+  if(lgBtnSrc === 'exit-logout.png') {
+    logoutBtn.src = 'exit-logout-white.png'
+  }
+  else {
+    logoutBtn.src = 'exit-logout.png'
+  }
+
+})
